@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Shree Devam Shukla</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .font-lora {
+            font-family: 'Lora', serif;
+        }
+        .gallery-item {
+            @apply relative overflow-hidden rounded-xl shadow-lg cursor-pointer transform transition-all duration-500 ease-in-out;
+            border-radius: 10px;
+        }
+        .gallery-item:hover {
+            @apply shadow-[0_0_40px_rgba(249,115,22,0.6)] scale-105 z-10;
+        }
+        .gallery-item img {
+            @apply w-full h-full object-cover transition-transform duration-500;
+        }
+        .gallery-item:hover img {
+            @apply scale-110;
+        }
+        .gallery-item .overlay {
+            @apply absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-500 flex items-center justify-center p-4;
+        }
+        .gallery-item:hover .overlay {
+            @apply opacity-100;
+        }
+        .gallery-item .overlay-text {
+            @apply text-white text-lg font-semibold text-center transform translate-y-4 transition-transform duration-500;
+        }
+        .gallery-item:hover .overlay-text {
+            @apply translate-y-0;
+        }
+    </style>
+</head>
+<body class="bg-orange-50/50">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-lg shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="devam.html" class="text-2xl font-bold font-lora text-gray-800">Shree Devam Shukla</a>
+            <nav>
+                <a href="devam.html" class="text-gray-600 hover:text-orange-600 transition-colors font-semibold">Back to Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <main class="pt-24 md:pt-32">
+        <section class="py-12">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <h1 class="text-3xl md:text-4xl font-bold font-lora text-gray-800 mb-2">Glimpses of Divine Moments</h1>
+                    <p class="text-lg text-gray-600">A collection of moments from our sacred ceremonies and spiritual services.</p>
+                </div>
+
+                <!-- Masonry-style Gallery Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <!-- Image 1 -->
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                        <img src="pooja_ritual.jpeg" alt="Pooja Ritual">
+                        <div class="overlay"><span class="overlay-text">Sacred Pooja Ritual</span></div>
+                    </div>
+                    <!-- Image 2 -->
+                    <div class="gallery-item sm:row-span-2" data-aos="fade-up" data-aos-delay="200">
+                        <img src="reciev_bless.jpeg" alt="Sacred Offerings">
+                        <div class="overlay"><span class="overlay-text">Divine Offerings</span></div>
+                    </div>
+                    <!-- Image 3 -->
+                    <div class="gallery-item lg:col-span-2" data-aos="fade-up" data-aos-delay="300">
+                        <img src="astr_consult.jpeg" alt="Astrology Chart">
+                        <div class="overlay"><span class="overlay-text">Astrology Consultation</span></div>
+                    </div>
+                    <!-- Image 4 -->
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                        <img src="ausp_havan.jpeg" alt="Havan Ceremony">
+                        <div class="overlay"><span class="overlay-text">Auspicious Havan</span></div>
+                    </div>
+                     <!-- Image 5 -->
+                    <div class="gallery-item lg:col-span-2" data-aos="fade-up" data-aos-delay="200">
+                        <img src="spiritual_guidance.jpeg" alt="Receiving Blessings">
+                        <div class="overlay"><span class="overlay-text">Receiving Blessings</span></div>
+                    </div>
+                    <!-- Image 6 -->
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+                        <img src="peaceful meditation.jpeg" alt="Meditation Space">
+                        <div class="overlay"><span class="overlay-text">Peaceful Meditation</span></div>
+                    </div>
+                    <!-- Image 7 -->
+                     <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                        <img src="the_sacred_fire.jpeg" alt="Sacred Fire">
+                        <div class="overlay"><span class="overlay-text">The Sacred Fire</span></div>
+                    </div>
+                     <!-- Image 8 -->
+                    
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p class="font-lora text-lg">Shree Devam Shukla</p>
+            <p class="mb-4">Guiding your spiritual journey with devotion and wisdom.</p>
+            <div class="flex justify-center items-center space-x-6 mb-4">
+                <a href="tel:+919839826767" class="hover:text-orange-400 transition-colors">+91 9839826767</a>
+                <a href="mailto:devam9839@gmail.com" class="hover:text-orange-400 transition-colors">devam9839@gmail.com</a>
+            </div>
+            <p class="text-gray-400 text-sm">&copy; 2024 Shree Devam Shukla. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 800,
+        });
+    </script>
+
+</body>
+</html>
